@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          소정씨는 잼민이야아아아아아아아아아아112233 <code>src/App.js</code> and save to reload.
+          소정씨는 13살인가? <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
