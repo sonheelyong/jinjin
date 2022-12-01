@@ -1,34 +1,33 @@
-import { BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-import About from './pages/About';
-import Hellow from './pages/Hellow';
-import Home from './pages/Home';
-import Profile from './pages/Profile';
-import SignUp from './pages/SignUp';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import About from './components/About';
+import Home from './components/Home';
+import Profile from './components/Profile';
+import SignUp from './components/SignUp';
+import SignUp2 from './components/SignUp2';
+
 
 
 function App() {
   return (
    <BrowserRouter>
-    <nav>
-       <Link to ={'/'}>Home </Link>
-       <Link to ={'/about'}>About </Link>
-       <Link to ={'/profile'}>Profile </Link>
-       <Link to ={'/signup'}>회원가입 </Link>
-       <Link to ={'/hellow'}>헬로 </Link>
-
-    </nav>
+   <nav>
+     <Link to = {'/'}> Home</Link> 
+     <Link to = {'/about'}> about</Link> 
+     <Link to = {'/profile'}> Profile</Link> 
+     <Link to = {'/signup'}> SignUp</Link> 
+     <Link to = {'/signup2'}> SignUp2</Link> 
+   </nav>
     <Routes>
-     <Route path='/' element={<Home />} />
-     <Route path='/about' element={<About />} />
-     <Route path='/profile' element={<Profile />} />
-     <Route path='/signup' element={<SignUp />} />
-     <Route path='/hellow' element={<Hellow />} />
-       
-
      
-    </Routes>
+     <Route path='/' element={<Home/>} />
+     <Route path='/about' element={<About/>} />
+     <Route path='/profile' element={<Profile/>} />
+     <Route path='/signup' element={<SignUp/>} />
+     <Route path='/signup2' element={<SignUp2/>} />
+     
+   </Routes>
    </BrowserRouter>
   );
-}
+  }
 
 export default App;

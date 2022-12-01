@@ -5,6 +5,7 @@ import com.green.service.AService;
 import com.green.vo.BoardVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +25,7 @@ public class Controller {
         return name;
     }
 
-    @GetMapping("/SingUp")
+    @PostMapping("/SignUp")
     public void SingUp(@RequestParam String id, @RequestParam String passwd){
         System.out.println(id);
         System.out.println(passwd);
