@@ -5,7 +5,7 @@
 
 <mapper namespace="A">
     <select id="A"
-        resultType="com.green.vo.BoardVo">
+        resultType="com.green.vo.UserVo">
         SELECT *
         FROM   MENUS
 

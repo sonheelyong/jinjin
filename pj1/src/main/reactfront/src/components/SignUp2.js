@@ -8,10 +8,10 @@ function SingUp2() {
     
   return (
     <div>
-         <input  onChange={(e)=>{
+        아이디 <input  onChange={(e)=>{
       Setid(e.target.value);
     }}/>
-       <input onChange={(e)=>{
+       비밀번호 <input onChange={(e)=>{
       Setpasswd(e.target.value);
     }}/>
       
