@@ -12,10 +12,10 @@ import java.util.List;
 public class UserDaoimpl implements UserDao {
     @Autowired
     SqlSession sqlSession;
-    @Override
-    public List<UserVo> getname() {
-        List<UserVo> name = sqlSession.selectList("A.A");
 
-        return name;
+    @Override
+    public List<UserVo> getList() {
+        List<UserVo> vo = sqlSession.selectList("User.getList");
+        return vo;
     }
 }

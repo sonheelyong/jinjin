@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 import SignUp2 from './components/SignUp2';
+import UserList from './components/UserList';
 
 
 
@@ -16,6 +17,7 @@ function App() {
      <Link to = {'/profile'}> Profile</Link> 
      <Link to = {'/signup'}> SignUp</Link> 
      <Link to = {'/signup2'}> SignUp2</Link> 
+     <Link to = {'/userList'}> UserList</Link> 
    </nav>
     <Routes>
      
@@ -24,6 +26,7 @@ function App() {
      <Route path='/profile' element={<Profile/>} />
      <Route path='/signup' element={<SignUp/>} />
      <Route path='/signup2' element={<SignUp2/>} />
+     <Route path='/userList' element={<UserList/>} />
      
    </Routes>
    </BrowserRouter>

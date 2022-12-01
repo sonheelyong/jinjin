@@ -2,6 +2,7 @@ package com.green.controller;
 
 
 import com.green.service.UserService;
+import com.green.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,4 +32,16 @@ public class Controller {
     public List<String> Hello(){
         return Arrays.asList("서버서버", "뷰뷰");
     }
-}
+
+
+
+    @GetMapping("/List")
+    public List<UserVo> getList() {
+
+        List<UserVo> vo = userService.getList();
+        System.out.println(vo);
+
+    return vo;
+    }
+
+    }
