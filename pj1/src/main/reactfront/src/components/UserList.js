@@ -1,24 +1,32 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-const UserList = () => {
-    const [vo, setUsers] = useState([]);
-
-    useEffect(() => {
-
-  fetch(('/List')
-  .then((response) => {
-    return response.json();
-    })
-  .then((error) => { 
-    console.log("error:", error);
-
-    });
-
-        
-}, []);
+function Users() {
+    const [userid, Setuserid] = useState("");
+    const [passwd, Setpasswd] = useState("");
 
    
-}
-export default UserList;
+        axios
+            .get('/List')
+            .then((response) => {
+                console.log(response.data);
+          
+                Setuserid(response.data[0].userid);
+                Setpasswd(response.data[0].passwd);
+           
+            })
+            .catch((error)=>{
+                console.log(error);
+            })
+            return (
+              <div>          
+                      <p>username<input type="text" required={true} value={userid} ></input></p>
+                      <p>password<input type="text" required={true} value={passwd} ></input></p>                
+                  
+              </div>
+          )
+    }
+   
+export default Users;

@@ -19,21 +19,12 @@ public class Controller {
     private UserService userService;
 
 
-    @PostMapping("/SignUp")
+    @GetMapping("/SignUp")
     public void SingUp(@RequestParam String id, @RequestParam String passwd){
         System.out.println(id);
         System.out.println(passwd);
 
     }
-
-
-
-    @GetMapping("/hello")
-    public List<String> Hello(){
-        return Arrays.asList("서버서버", "뷰뷰");
-    }
-
-
 
     @GetMapping("/List")
     public List<UserVo> getList() {
@@ -43,5 +34,7 @@ public class Controller {
 
     return vo;
     }
+
+
 
     }
