@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import About from './components/About';
+import Home from './components/Home';
+import Profile from './components/Profile';
+import SignUp from './components/SignUp';
+import SignUp2 from './components/SignUp2';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          이걸로 ㄹㄹㄹ 되는가?<code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <BrowserRouter>
+   <nav>
+     <Link to = {'/'}> Home</Link>
+     <Link to = {'/about'}> about</Link>
+     <Link to = {'/profile'}> Profile</Link>
+     <Link to = {'/signup'}> SignUp</Link>
+     <Link to = {'/signup2'}> SignUp2</Link>
+   </nav>
+    <Routes>
+
+     <Route path='/' element={<Home/>} />
+     <Route path='/about' element={<About/>} />
+     <Route path='/profile' element={<Profile/>} />
+     <Route path='/signup' element={<SignUp/>} />
+     <Route path='/signup2' element={<SignUp2/>} />
+
+   </Routes>
+   </BrowserRouter>
   );
-}
+  }
 
 export default App;
