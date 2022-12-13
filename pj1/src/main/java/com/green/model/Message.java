@@ -18,4 +18,6 @@ public class Message {
     private String message;
     private LocalDateTime date = LocalDateTime.now();
     private Status status;
+
+    //11111111
 }
