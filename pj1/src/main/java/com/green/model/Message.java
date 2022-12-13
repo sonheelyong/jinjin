@@ -3,6 +3,9 @@ package com.green.model;
 
 import lombok.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -13,6 +16,6 @@ public class Message {
     private String senderName;
     private String receiverName;
     private String message;
-    private String date;
+    private LocalDateTime date = LocalDateTime.now();
     private Status status;
 }
