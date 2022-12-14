@@ -36,7 +36,10 @@ public class Controller {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a4e969a7bd6bfc9f96835b016e7e6379aea44c8f
     @RequestMapping(value= "/User/Registry", method=RequestMethod.POST, produces = "application/json")
     public void Registry(@RequestBody Map<String, Object> param){
 
@@ -45,6 +48,9 @@ public class Controller {
     }
 
 
+<<<<<<< HEAD
+>>>>>>> a4e969a7bd6bfc9f96835b016e7e6379aea44c8f
+=======
 >>>>>>> a4e969a7bd6bfc9f96835b016e7e6379aea44c8f
 
     }

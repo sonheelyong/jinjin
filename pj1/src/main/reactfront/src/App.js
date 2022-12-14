@@ -12,6 +12,9 @@ import UserList from './components/UserList';
 import Header from './components/Header'
 import ChatRoom from './components/ChatRoom';
 import Registry from './components/Registry';
+<<<<<<< HEAD
+>>>>>>> a4e969a7bd6bfc9f96835b016e7e6379aea44c8f
+=======
 >>>>>>> a4e969a7bd6bfc9f96835b016e7e6379aea44c8f
 
 const App = () => {
