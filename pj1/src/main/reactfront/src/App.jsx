@@ -9,9 +9,6 @@ import UserList from './components/UserList';
 import GoogleLoginButton from './components/login/GoogleLoginButton'
 import AfterProfile  from './components/login/AfterProfile';
 import Board from './components/board/Board';
-import Login from './components/login/Login';
-import MyPage from './components/MyPage';
-
 
 const App = () => {
 
@@ -28,10 +25,10 @@ const App = () => {
       <Route path='/signup' element={<SignUp/>} />
       <Route path='/userList' element={<UserList/>} />
       <Route path='/googleLoginButton' element={<GoogleLoginButton/>} />
-      <Route path='/login' element={<Login/>}/>
+      
       <Route path='/afterProfile' element={<AfterProfile/>} />
       <Route path='/board' element={<Board/>}/>
-      <Route path='/mypage' element={<MyPage />}/>
+      
 
       
     </Routes>

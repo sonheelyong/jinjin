@@ -11,6 +11,7 @@ export default function GoogleLoginButton() {
         console.log(userObject);
         setUser(userObject);
         document.getElementById('googleSignInDiv').hidden = true;
+        
     }
 
     function handleSignOut(e) {
@@ -18,11 +19,13 @@ export default function GoogleLoginButton() {
         document.getElementById('googleSignInDiv').hidden = false;
     }
 
+
     useEffect(() => {
  
         google.accounts.id.initialize({
             client_id: "662818922452-8evkfn0vqon57a3vbcrmk30qgkutj4qf.apps.googleusercontent.com",
             callback: handleCallbackResponse
+            
         });
 
         google.accounts.id.renderButton(
@@ -34,14 +37,32 @@ export default function GoogleLoginButton() {
 
     }, [] );
 
-    
+    function onSignIn(e){
+        e.preventDefault();
+        fetch('/googleToken', {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json',
+            },
+            body : JSON.stringify({
+                email: user.email,
+                name: user.name
+            }),
+        })
+        .then(res => {
+            alert("success")
+            
+        })
+    }
+
 
     return (
         <>
         <div id='googleSignInDiv'></div>
         { Object.keys(user).length != 0 &&
-         <button onClick={ (e) => handleSignOut(e)}>Sign out</button> 
+         <button onClick={ (e) => handleSignOut(e)}>Sign out</button>
         }
+
         
         {user && 
             <div>
@@ -49,6 +70,7 @@ export default function GoogleLoginButton() {
                 <h3>{user.name}</h3>
             </div>
         }
+        <button onClick={onSignIn}>Check</button>
         </>
     );
 }
